@@ -5,7 +5,7 @@
       xmlns:dc="http://purl.org/dc/elements/1.1/" 
       version="2.0">
 <channel>
-<title>Lorenzo Bonasera: Home</title>
+<title>Lorenzo Bonasera</title>
 <link>https://lorebon.github.io/posts.html</link>
 <atom:link href="https://lorebon.github.io/posts.xml" rel="self" type="application/rss+xml"/>
 <description>Personal website of Lorenzo Bonasera</description>
