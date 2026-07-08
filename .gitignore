@@ -1,0 +1,11 @@
+@"
+# Ignore everything by default
+*
+
+# Keep only the rendered website
+!docs/
+!docs/**
+
+# Keep this ignore file
+!.gitignore
+"@ | Set-Content -Encoding UTF8 .gitignore
