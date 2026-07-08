@@ -1,7 +1,7 @@
 /* Homepage layout: photo/links on the left, bio on the right, publications below. */
 
 main.content {
-  max-width: 1100px;
+  max-width: 1000px;
 }
 
 .home-hero {
