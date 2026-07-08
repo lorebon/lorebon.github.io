@@ -6,7 +6,7 @@ main.content {
 
 .home-hero {
   display: grid;
-  grid-template-columns: 280px minmax(0, 1fr); /* left column width */
+  grid-template-columns: 300px minmax(0, 1fr); /* left column width */
   gap: 2rem;
   align-items: start;
   margin-top: 1.5rem;
@@ -14,7 +14,7 @@ main.content {
 }
 
 .home-photo img {
-  width: 280px;        /* image width */
+  width: 300px;        /* image width */
   max-width: 100%;
   height: auto;
   border-radius: 8px;
@@ -83,13 +83,13 @@ main.content {
   }
 
   .home-photo img {
-    width: 220px;
+    width: 240px;
     margin-left: auto;
     margin-right: auto;
   }
 
   .photo-links {
-    width: 220px;
+    width: 240px;
     margin-left: auto;
     margin-right: auto;
     justify-content: space-between;
