@@ -72,10 +72,31 @@ main.content {
   .home-hero {
     grid-template-columns: 1fr;
     gap: 1.25rem;
+    justify-items: center;
+  }
+
+  .home-photo {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   .home-photo img {
     width: 220px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .photo-links {
+    width: 220px;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: space-between;
+  }
+
+  .home-intro {
+    width: 100%;
   }
 }
 
