@@ -83,16 +83,37 @@ main.content {
   }
 
   .home-photo img {
-    width: 220px;
+    width: 200px;
     margin-left: auto;
     margin-right: auto;
   }
 
   .photo-links {
-    width: 220px;
-    margin-left: auto;
-    margin-right: auto;
-    justify-content: space-between;
+    width: 200px !important;          /* match your mobile image width */
+    max-width: 100% !important;
+    margin: 0.9rem auto 0 auto !important;
+
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+
+    text-align: center !important;
+  }
+
+  .photo-links a {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    color: inherit !important;
+    text-decoration: none !important;
+  }
+
+  .photo-links svg,
+  .photo-links i {
+    width: 1.5rem !important;
+    height: 1.5rem !important;
+    font-size: 1.5rem !important;
   }
 
   .home-intro {
