@@ -5,31 +5,31 @@
       xmlns:dc="http://purl.org/dc/elements/1.1/" 
       version="2.0">
 <channel>
-<title>Lorenzo Bonasera</title>
-<link>https://YOUR-GITHUB-USERNAME.github.io/posts.html</link>
-<atom:link href="https://YOUR-GITHUB-USERNAME.github.io/posts.xml" rel="self" type="application/rss+xml"/>
+<title>Lorenzo Bonasera: Home</title>
+<link>https://lorebon.github.io/posts.html</link>
+<atom:link href="https://lorebon.github.io/posts.xml" rel="self" type="application/rss+xml"/>
 <description>Personal website of Lorenzo Bonasera</description>
 <generator>quarto-1.9.38</generator>
 <lastBuildDate>Mon, 14 Oct 2024 22:00:00 GMT</lastBuildDate>
 <item>
   <title>Quarto Academic Website Examples and Tips</title>
-  <link>https://YOUR-GITHUB-USERNAME.github.io/</link>
+  <link>https://lorebon.github.io/</link>
   <description>Examples and tips for Quarto Academic Website</description>
   <category>news</category>
-  <guid>https://YOUR-GITHUB-USERNAME.github.io/</guid>
+  <guid>https://lorebon.github.io/</guid>
   <pubDate>Mon, 14 Oct 2024 22:00:00 GMT</pubDate>
-  <media:content url="https://YOUR-GITHUB-USERNAME.github.io/files/images/placeholder1.jpg" medium="image" type="image/jpeg"/>
+  <media:content url="https://lorebon.github.io/files/images/placeholder1.jpg" medium="image" type="image/jpeg"/>
 </item>
 <item>
   <title>Event item</title>
   <dc:creator>Event </dc:creator>
-  <link>https://YOUR-GITHUB-USERNAME.github.io/posts/event-title/</link>
+  <link>https://lorebon.github.io/posts/event-title/</link>
   <description><![CDATA[ 
 
 
 
 
-<p><a href="https://drganghe.github.io/quarto-academic-website-template/"><img src="https://YOUR-GITHUB-USERNAME.github.io/files/images/placeholder2.JPG" class="img-fluid" style="width:90.0%"></a></p>
+<p><a href="https://drganghe.github.io/quarto-academic-website-template/"><img src="https://lorebon.github.io/files/images/placeholder2.JPG" class="img-fluid" style="width:90.0%"></a></p>
 <!--Include social share buttons-->
 <!-- 
 AddToAny check more: https://www.addtoany.com/buttons/for/website 
@@ -46,14 +46,14 @@ https://quarto.org/docs/authoring/includes.html
  ]]></description>
   <category>event</category>
   <category>presentation</category>
-  <guid>https://YOUR-GITHUB-USERNAME.github.io/posts/event-title/</guid>
+  <guid>https://lorebon.github.io/posts/event-title/</guid>
   <pubDate>Mon, 02 Sep 2024 22:00:00 GMT</pubDate>
-  <media:content url="https://YOUR-GITHUB-USERNAME.github.io/files/images/placeholder2.JPG" medium="image"/>
+  <media:content url="https://lorebon.github.io/files/images/placeholder2.JPG" medium="image"/>
 </item>
 <item>
   <title>News item</title>
   <dc:creator>News </dc:creator>
-  <link>https://YOUR-GITHUB-USERNAME.github.io/posts/news-title/</link>
+  <link>https://lorebon.github.io/posts/news-title/</link>
   <description><![CDATA[ 
 
 
@@ -78,16 +78,16 @@ https://quarto.org/docs/authoring/includes.html
 
  ]]></description>
   <category>news</category>
-  <guid>https://YOUR-GITHUB-USERNAME.github.io/posts/news-title/</guid>
+  <guid>https://lorebon.github.io/posts/news-title/</guid>
   <pubDate>Sun, 23 Jun 2024 22:00:00 GMT</pubDate>
-  <media:content url="https://YOUR-GITHUB-USERNAME.github.io/files/images/placeholder3.JPG" medium="image"/>
+  <media:content url="https://lorebon.github.io/files/images/placeholder3.JPG" medium="image"/>
 </item>
 <item>
   <title>Can quantum-mechanical description of physical reality be considered complete?</title>
   <dc:creator>Albert Einstein</dc:creator>
   <dc:creator>Boris Podolsky</dc:creator>
   <dc:creator>Nathan Rosen</dc:creator>
-  <link>https://YOUR-GITHUB-USERNAME.github.io/posts/paper-title/</link>
+  <link>https://lorebon.github.io/posts/paper-title/</link>
   <description><![CDATA[ 
 
 
@@ -140,9 +140,9 @@ Quantum-Mechanical Description of Physical Reality Be Considered
 Complete?”</span> <em>Physical Review</em> 47 (7938): 777–80. <a href="https://doi.org/10.1103/PhysRev.47.777">https://doi.org/10.1103/PhysRev.47.777</a>.
 </div></div></section></div> ]]></description>
   <category>paper</category>
-  <guid>https://YOUR-GITHUB-USERNAME.github.io/posts/paper-title/</guid>
+  <guid>https://lorebon.github.io/posts/paper-title/</guid>
   <pubDate>Tue, 14 May 1935 23:00:00 GMT</pubDate>
-  <media:content url="https://YOUR-GITHUB-USERNAME.github.io/posts/paper-title/featured.jpg" medium="image" type="image/jpeg"/>
+  <media:content url="https://lorebon.github.io/posts/paper-title/featured.jpg" medium="image" type="image/jpeg"/>
 </item>
 </channel>
 </rss>
