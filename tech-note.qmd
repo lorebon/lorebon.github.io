@@ -1,0 +1,7 @@
+---
+title: "Technical Notes"
+page-navigation: false
+toc: true
+---
+
+Here I collect sparse ideas and comments on research works.

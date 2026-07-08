@@ -1,0 +1,77 @@
+- section: Working Papers
+  authors: "Lorenzo Bonasera, David Pisinger"
+  authors_line: "Lorenzo Bonasera, David Pisinger"
+  title: Joint Rashomon and Robustness Optimization for Interpretable Contextual Decision-Making
+  title_line: Joint Rashomon and Robustness Optimization for Interpretable Contextual Decision-Making
+  journal: In preparation
+  venue_line: In preparation
+
+- section: Working Papers
+  authors: "Lorenzo Bonasera, David Pisinger"
+  authors_line: "Lorenzo Bonasera, David Pisinger"
+  title: Sequential Decision Support for Implementing Near-Optimal Integer Programming Solutions
+  title_line: Sequential Decision Support for Implementing Near-Optimal Integer Programming Solutions
+  journal: Submitted
+  venue_line: Submitted
+
+- section: Journal Articles
+  authors: "Lorenzo Bonasera, Emilio Carrizosa"
+  authors_line: "Lorenzo Bonasera, Emilio Carrizosa"
+  year: 2025
+  title: A unified approach to extract interpretable rules from tree ensembles via Integer Programming
+  title_line: A unified approach to extract interpretable rules from tree ensembles via Integer Programming
+  path: "https://doi.org/10.1016/j.cor.2025.107283"
+  journal: "Computers & Operations Research"
+  venue_line: "Computers & Operations Research (2025)"
+
+- section: Journal Articles
+  authors: Lorenzo Bonasera
+  authors_line: Lorenzo Bonasera
+  year: 2025
+  title: Operations Research for Interpretable Machine Learning
+  title_line: Operations Research for Interpretable Machine Learning
+  path: "https://link.springer.com/article/10.1007/s10288-025-00590-2"
+  journal: 4OR - PhD Thesis
+  venue_line: 4OR - PhD Thesis (2025)
+
+- section: Journal Articles
+  authors: "Ambrogio Maria Bernardelli, Lorenzo Bonasera, Davide Duma, Eleonora Vercesi"
+  authors_line: "Ambrogio Maria Bernardelli, Lorenzo Bonasera, Davide Duma, Eleonora Vercesi"
+  year: 2024
+  title: Multi-objective stochastic scheduling of inpatient and outpatient surgeries
+  title_line: Multi-objective stochastic scheduling of inpatient and outpatient surgeries
+  path: "https://link.springer.com/article/10.1007/s10696-024-09542-0"
+  journal: Flexible Services and Manufacturing Journal
+  venue_line: Flexible Services and Manufacturing Journal (2024)
+  preprint: "https://drganghe.github.io/files/papers/2022-nature-solar-supply-chains-preprint.pdf"
+
+- section: Journal Articles
+  authors: "Lorenzo Bonasera, Stefano Gualandi"
+  authors_line: "Lorenzo Bonasera, Stefano Gualandi"
+  year: 2024
+  title: Optimal shapelets tree for time series interpretable classification
+  title_line: Optimal shapelets tree for time series interpretable classification
+  path: "https://doi.org/10.1016/j.ejco.2024.100091"
+  journal: EURO Journal on Computational Optimization
+  venue_line: EURO Journal on Computational Optimization (2024)
+  mediacoverage: "[SBU News](https://news.stonybrook.edu/newsroom/study-shows-decrease-in-renewable-energy-costs-may-serve-as-an-accelerator-for-clean-energy-expansion/) | [LBL News](https://eta.lbl.gov/news/falling-prices-could-accelerate-china) | [*Carbon Brief* Headline](https://www.carbonbrief.org/guest-post-chinas-power-sector-could-be-10-per-cent-cheaper-in-2030-with-more-renewables) | [*InsideClimateNews*](https://insideclimatenews.org/news/04062020/inside-clean-energy-arkansas-rooftop-solar/) | [*E&E News*/*ClimateWire*](https://subscriber.politicopro.com/article/eenews/1063354565) | [*Forbes*](https://www.forbes.com/sites/energyinnovation/2020/08/10/plummeting-renewable-energy-battery-prices-mean-china-could-hit-62-clean-power-and-cut-costs-11-by-2030/?sh=29fa3f2f1519) | [*Nature* News](https://www.nature.com/articles/d41586-020-02927-9)"
+
+- section: Book Chapters and Conference Proceedings
+  authors: "Aliza Katharina Reif, Lorenzo Bonasera, Stjepan Picek, Oscar Hernán Ramírez-Agudelo, Michael Karl"
+  authors_line: "Aliza Katharina Reif, Lorenzo Bonasera, Stjepan Picek, Oscar Hernán Ramírez-Agudelo, Michael Karl"
+  year: 2025
+  title: Black-Box Universal Adversarial Attack on Automatic Speech Recognition Systems for Maritime Radio Communication Using Evolutionary Strategies
+  title_line: Black-Box Universal Adversarial Attack on Automatic Speech Recognition Systems for Maritime Radio Communication Using Evolutionary Strategies
+  path: "https://dl.acm.org/doi/full/10.1145/3733799.3762974"
+  journal: 18th ACM Workshop on Artificial Intelligence and Security
+  venue_line: 18th ACM Workshop on Artificial Intelligence and Security (2025)
+
+- section: Book Chapters and Conference Proceedings
+  authors: "Lorenzo Bonasera, Davide Duma, Stefano Gualandi"
+  authors_line: "Lorenzo Bonasera, Davide Duma, Stefano Gualandi"
+  year: 2024
+  title: Learning Sparse-Lets for Interpretable Classification of Event-interval Sequences
+  title_line: Learning Sparse-Lets for Interpretable Classification of Event-interval Sequences
+  path: "https://link.springer.com/chapter/10.1007/978-3-031-62922-8_1"
+  journal: 15th Metaheuristics International Conference
+  venue_line: 15th Metaheuristics International Conference (2024)
