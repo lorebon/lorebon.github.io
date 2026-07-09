@@ -6,7 +6,7 @@ main.content {
 
 .home-hero {
   display: grid;
-  grid-template-columns: 240px minmax(0, 1fr); /* left column width */
+  grid-template-columns: 220px minmax(0, 1fr); /* left column width */
   gap: 2rem;
   align-items: start;
   margin-top: 1.5rem;
@@ -14,7 +14,7 @@ main.content {
 }
 
 .home-photo img {
-  width: 240px;        /* image width */
+  width: 220px;        /* image width */
   max-width: 100%;
   height: auto;
   border-radius: 8px;
