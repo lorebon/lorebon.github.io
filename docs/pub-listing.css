@@ -83,13 +83,13 @@ main.content {
   }
 
   .home-photo img {
-    width: 200px;
+    width: 180px;
     margin-left: auto;
     margin-right: auto;
   }
 
   .photo-links {
-    width: 200px !important;          /* match your mobile image width */
+    width: 180px !important;          /* match your mobile image width */
     max-width: 100% !important;
     margin: 0.9rem auto 0 auto !important;
 
