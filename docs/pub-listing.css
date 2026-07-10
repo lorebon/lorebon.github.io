@@ -1,7 +1,7 @@
 /* Homepage layout: photo/links on the left, bio on the right, publications below. */
 
 main.content {
-  max-width: 1000px;
+  max-width: 950px;
 }
 
 .home-hero {
@@ -159,8 +159,12 @@ a:hover {
   opacity: 0.75;
 }
 
-.tech-note[open] > summary::after {
-  content: "";
-  display: block;
-  height: 0.75rem;
+/* Spacing between clickable title and expanded content */
+.tech-note[open] summary {
+  margin-bottom: 1rem;
+}
+
+/* Keep first element inside the expanded content from adding extra top space */
+.tech-note[open] summary + * {
+  margin-top: 0;
 }
