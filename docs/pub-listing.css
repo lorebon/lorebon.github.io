@@ -138,3 +138,29 @@ a:hover {
   height: 2rem !important;
   font-size: 2rem !important;
 }
+
+/* Tech-note accordion layout */
+.tech-note {
+  margin: 1rem 0;
+  padding: 1rem 1.15rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background: #fafafa;
+}
+
+.tech-note summary {
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 1.05rem;
+  margin: 0;
+}
+
+.tech-note summary:hover {
+  opacity: 0.75;
+}
+
+.tech-note[open] > summary::after {
+  content: "";
+  display: block;
+  height: 0.75rem;
+}
