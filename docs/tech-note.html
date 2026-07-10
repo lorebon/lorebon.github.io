@@ -155,65 +155,69 @@ window.Quarto = {
 <p>Here, I collect ideas and comments on research work.</p>
 <details class="tech-note">
 <summary>
-Optimal shapelets tree for time series interpretable classification (2024)
+Bonasera, L., Gualandi, S. (2024). Optimal shapelets tree for time series interpretable classification. <em>EURO Journal on Computational Optimization, 12</em>, 100091.
 </summary>
 <p><span style="display:block; height:0.1rem;"></span></p>
-<p><span style="color: green;">Improvement:</span> As defined in Eq. (1), the distance between a shapelet and a time series is computed by minimizing the distance between the shapelet and all subsequences of the time series having the same length. In the case of long shapelets, the magnitude of the distance may increase with the shapelet length, leading to larger Big-M values in Eqs. (60)–(61) and, consequently, to weaker linear relaxations.</p>
+<ul>
+<li><p><span style="color: green;">Possible extension:</span> As defined in Eq. (1), the distance between a shapelet and a time series is computed by minimizing the distance between the shapelet and all subsequences of the time series having the same length. In the case of long shapelets, the magnitude of the distance may increase with the shapelet length, leading to larger Big-M values in Eqs. (60)–(61) and, consequently, to weaker linear relaxations.</p>
 <p>A possible alternative is to use the normalized <span class="math inline">\(\ell_1\)</span> distance</p>
 <p><span class="math display">\[
-\operatorname{dist}(\mathbf{x}, \mathbf{y})
-=
-\min_{1 \leq p \leq q}
-\frac{1}{\ell}
-\left\lVert \mathbf{y} - \mathbf{x}_p^\ell \right\rVert_1 .
-\]</span></p>
+  \operatorname{dist}(\mathbf{x}, \mathbf{y})
+  =
+  \min_{1 \leq p \leq q}
+  \frac{1}{\ell}
+  \left\lVert \mathbf{y} - \mathbf{x}_p^\ell \right\rVert_1 .
+  \]</span></p>
 <p>In this way, we can rewrite Eq. (73) as</p>
 <p><span class="math display">\[
-M_i^L
-=
-\max
-\left\{
-\frac{1}{\ell}
-\sum_{j\in[\ell]}
-\left(\theta_{ij}^+ + \theta_{ij}^- \right)
--
-b
-\right\}
-\leq
-\max
-\left\{
-\frac{1}{\ell}
-\sum_{j\in[\ell]}
-|s_j-u_{ij}|
-\right\}
-\leq
-1,
-\qquad \forall i\in[n].
-\]</span></p>
+  M_i^L
+  =
+  \max
+  \left\{
+  \frac{1}{\ell}
+  \sum_{j\in[\ell]}
+  \left(\theta_{ij}^+ + \theta_{ij}^- \right)
+  -
+  b
+  \right\}
+  \leq
+  \max
+  \left\{
+  \frac{1}{\ell}
+  \sum_{j\in[\ell]}
+  |s_j-u_{ij}|
+  \right\}
+  \leq
+  1,
+  \qquad \forall i\in[n].
+  \]</span></p>
 <p>Moreover, the threshold variables can be bounded by replacing Eq. (71) with <span class="math display">\[
-0 \leq b_t \leq 1,
-\qquad \forall t\in \mathcal{T}_B.
-\]</span></p>
+  0 \leq b_t \leq 1,
+  \qquad \forall t\in \mathcal{T}_B.
+  \]</span></p>
 <p>Similarly, for Eq. (74), we obtain</p>
 <p><span class="math display">\[
-M_i^R
-=
-\max\{b\}
-=
-1,
-\qquad \forall i\in[n].
-\]</span></p>
+  M_i^R
+  =
+  \max\{b\}
+  =
+  1,
+  \qquad \forall i\in[n].
+  \]</span></p></li>
+</ul>
 </details>
 <details class="tech-note">
 <summary>
-Learning Sparse-Lets for Interpretable Classification of Event-interval Sequences (2024)
+Bonasera, L., Duma, D., Gualandi, S. (2024). Learning Sparse-Lets for Interpretable Classification of Event-interval Sequences. In <em>Metaheuristics: MIC 2024</em> (<em>Lecture Notes in Computer Science</em>, Vol. 14754).
 </summary>
 <p><span style="display:block; height:0.1rem;"></span></p>
-<p><span style="color: green;">Improvement:</span> After being sampled, e-lets/sparse-lets are matched to each e-sequence using a sliding window. Therefore, Eq. (1) implies that the length of each e-let/sparse-let must be less than or equal to the length of the shortest e-sequence, that is</p>
+<ul>
+<li><p><span style="color: green;">Possible extension:</span> After being sampled, e-lets/sparse-lets are matched to each e-sequence using a sliding window. Therefore, Eq. (1) implies that the length of each e-let/sparse-let must be less than or equal to the length of the shortest e-sequence, that is</p>
 <p><span class="math display">\[
-\ell(\mathcal{S}_i^{k, l}) \leq \min_{\mathcal{S}_j \in \mathcal{D}} \, \ell(\mathcal{S}_j), \qquad \forall k \in \{0, \dotsc, \ell(\mathcal{S}_i) - 1\}, \; \forall l \in \{1, \dotsc, \ell(\mathcal{S}_i) - k\}, \; \forall i \in \{1, \dotsc, N\}.
-\]</span></p>
-<p>This can be a limitation in applications where e-sequence lengths vary substantially. In such cases, the sampled e-lets/sparse-lets may be unable to capture relevant patterns in the data. One possible solution is to add a “no-event” symbol to the alphabet of the e-sequences. This makes it possible to pad shorter e-sequences with no-event symbols, thereby removing the constraint on the maximum length of e-lets/sparse-lets.</p>
+  \ell(\mathcal{S}_i^{k, l}) \leq \min_{\mathcal{S}_j \in \mathcal{D}} \, \ell(\mathcal{S}_j), \qquad \forall k \in \{0, \dotsc, \ell(\mathcal{S}_i) - 1\}, \; \forall l \in \{1, \dotsc, \ell(\mathcal{S}_i) - k\}, \; \forall i \in \{1, \dotsc, N\}.
+  \]</span></p>
+<p>This can be a limitation in applications where e-sequence lengths vary substantially. In such cases, the sampled e-lets/sparse-lets may be unable to capture relevant patterns in the data. One possible solution is to add a “no-event” symbol to the alphabet of the e-sequences. This makes it possible to pad shorter e-sequences with no-event symbols, thereby removing the constraint on the maximum length of e-lets/sparse-lets.</p></li>
+</ul>
 </details>
 
 

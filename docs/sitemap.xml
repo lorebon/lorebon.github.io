@@ -2,54 +2,26 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://lorebon.github.io/tech-note.html</loc>
-    <lastmod>2026-07-10T13:18:43.011Z</lastmod>
-  </url>
-  <url>
-    <loc>https://lorebon.github.io/publications.html</loc>
-    <lastmod>2026-07-08T09:29:56.747Z</lastmod>
-  </url>
-  <url>
-    <loc>https://lorebon.github.io/pub-listing.html</loc>
-    <lastmod>2026-07-08T09:29:56.738Z</lastmod>
-  </url>
-  <url>
-    <loc>https://lorebon.github.io/posts.html</loc>
-    <lastmod>2026-07-08T09:29:56.695Z</lastmod>
-  </url>
-  <url>
-    <loc>https://lorebon.github.io/posts/news-title/index.html</loc>
-    <lastmod>2026-07-08T09:29:58.523Z</lastmod>
-  </url>
-  <url>
-    <loc>https://lorebon.github.io/people.html</loc>
-    <lastmod>2026-07-08T09:29:56.686Z</lastmod>
-  </url>
-  <url>
-    <loc>https://lorebon.github.io/contact.html</loc>
-    <lastmod>2026-07-08T09:29:56.659Z</lastmod>
-  </url>
-  <url>
-    <loc>https://lorebon.github.io/index.html</loc>
-    <lastmod>2026-07-09T11:28:30.334Z</lastmod>
-  </url>
-  <url>
-    <loc>https://lorebon.github.io/posts/event-title/index.html</loc>
-    <lastmod>2026-07-08T09:29:58.501Z</lastmod>
-  </url>
-  <url>
-    <loc>https://lorebon.github.io/posts/paper-title/index.html</loc>
-    <lastmod>2026-07-08T09:29:58.563Z</lastmod>
-  </url>
-  <url>
-    <loc>https://lorebon.github.io/projects.html</loc>
-    <lastmod>2026-07-08T09:29:56.704Z</lastmod>
+    <lastmod>2026-07-10T13:44:02.815Z</lastmod>
   </url>
   <url>
     <loc>https://lorebon.github.io/publications-list.html</loc>
     <lastmod>2026-07-09T11:29:09.568Z</lastmod>
   </url>
   <url>
-    <loc>https://lorebon.github.io/teaching.html</loc>
-    <lastmod>2026-07-08T09:29:56.798Z</lastmod>
+    <loc>https://lorebon.github.io/posts/paper-title/index.html</loc>
+    <lastmod>2026-07-08T09:29:58.563Z</lastmod>
+  </url>
+  <url>
+    <loc>https://lorebon.github.io/index.html</loc>
+    <lastmod>2026-07-09T11:28:30.334Z</lastmod>
+  </url>
+  <url>
+    <loc>https://lorebon.github.io/pub-listing.html</loc>
+    <lastmod>2026-07-08T09:29:56.738Z</lastmod>
+  </url>
+  <url>
+    <loc>https://lorebon.github.io/publications.html</loc>
+    <lastmod>2026-07-08T09:29:56.747Z</lastmod>
   </url>
 </urlset>

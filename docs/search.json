@@ -4,21 +4,42 @@
     "href": "tech-note.html",
     "title": "Technical Notes",
     "section": "",
-    "text": "Here, I collect ideas and comments on research work.\n\n\nOptimal shapelets tree for time series interpretable classification (2024)\n\n\nImprovement: As defined in Eq. (1), the distance between a shapelet and a time series is computed by minimizing the distance between the shapelet and all subsequences of the time series having the same length. In the case of long shapelets, the magnitude of the distance may increase with the shapelet length, leading to larger Big-M values in Eqs. (60)–(61) and, consequently, to weaker linear relaxations.\nA possible alternative is to use the normalized \\(\\ell_1\\) distance\n\\[\n\\operatorname{dist}(\\mathbf{x}, \\mathbf{y})\n=\n\\min_{1 \\leq p \\leq q}\n\\frac{1}{\\ell}\n\\left\\lVert \\mathbf{y} - \\mathbf{x}_p^\\ell \\right\\rVert_1 .\n\\]\nIn this way, we can rewrite Eq. (73) as\n\\[\nM_i^L\n=\n\\max\n\\left\\{\n\\frac{1}{\\ell}\n\\sum_{j\\in[\\ell]}\n\\left(\\theta_{ij}^+ + \\theta_{ij}^- \\right)\n-\nb\n\\right\\}\n\\leq\n\\max\n\\left\\{\n\\frac{1}{\\ell}\n\\sum_{j\\in[\\ell]}\n|s_j-u_{ij}|\n\\right\\}\n\\leq\n1,\n\\qquad \\forall i\\in[n].\n\\]\nMoreover, the threshold variables can be bounded by replacing Eq. (71) with \\[\n0 \\leq b_t \\leq 1,\n\\qquad \\forall t\\in \\mathcal{T}_B.\n\\]\nSimilarly, for Eq. (74), we obtain\n\\[\nM_i^R\n=\n\\max\\{b\\}\n=\n1,\n\\qquad \\forall i\\in[n].\n\\]\n\n\n\nLearning Sparse-Lets for Interpretable Classification of Event-interval Sequences (2024)\n\n\nImprovement: After being sampled, e-lets/sparse-lets are matched to each e-sequence using a sliding window. Therefore, Eq. (1) implies that the length of each e-let/sparse-let must be less than or equal to the length of the shortest e-sequence, that is\n\\[\n\\ell(\\mathcal{S}_i^{k, l}) \\leq \\min_{\\mathcal{S}_j \\in \\mathcal{D}} \\, \\ell(\\mathcal{S}_j), \\qquad \\forall k \\in \\{0, \\dotsc, \\ell(\\mathcal{S}_i) - 1\\}, \\; \\forall l \\in \\{1, \\dotsc, \\ell(\\mathcal{S}_i) - k\\}, \\; \\forall i \\in \\{1, \\dotsc, N\\}.\n\\]\nThis can be a limitation in applications where e-sequence lengths vary substantially. In such cases, the sampled e-lets/sparse-lets may be unable to capture relevant patterns in the data. One possible solution is to add a “no-event” symbol to the alphabet of the e-sequences. This makes it possible to pad shorter e-sequences with no-event symbols, thereby removing the constraint on the maximum length of e-lets/sparse-lets."
+    "text": "Here, I collect ideas and comments on research work.\n\n\nBonasera, L., Gualandi, S. (2024). Optimal shapelets tree for time series interpretable classification. EURO Journal on Computational Optimization, 12, 100091.\n\n\n\nPossible extension: As defined in Eq. (1), the distance between a shapelet and a time series is computed by minimizing the distance between the shapelet and all subsequences of the time series having the same length. In the case of long shapelets, the magnitude of the distance may increase with the shapelet length, leading to larger Big-M values in Eqs. (60)–(61) and, consequently, to weaker linear relaxations.\nA possible alternative is to use the normalized \\(\\ell_1\\) distance\n\\[\n  \\operatorname{dist}(\\mathbf{x}, \\mathbf{y})\n  =\n  \\min_{1 \\leq p \\leq q}\n  \\frac{1}{\\ell}\n  \\left\\lVert \\mathbf{y} - \\mathbf{x}_p^\\ell \\right\\rVert_1 .\n  \\]\nIn this way, we can rewrite Eq. (73) as\n\\[\n  M_i^L\n  =\n  \\max\n  \\left\\{\n  \\frac{1}{\\ell}\n  \\sum_{j\\in[\\ell]}\n  \\left(\\theta_{ij}^+ + \\theta_{ij}^- \\right)\n  -\n  b\n  \\right\\}\n  \\leq\n  \\max\n  \\left\\{\n  \\frac{1}{\\ell}\n  \\sum_{j\\in[\\ell]}\n  |s_j-u_{ij}|\n  \\right\\}\n  \\leq\n  1,\n  \\qquad \\forall i\\in[n].\n  \\]\nMoreover, the threshold variables can be bounded by replacing Eq. (71) with \\[\n  0 \\leq b_t \\leq 1,\n  \\qquad \\forall t\\in \\mathcal{T}_B.\n  \\]\nSimilarly, for Eq. (74), we obtain\n\\[\n  M_i^R\n  =\n  \\max\\{b\\}\n  =\n  1,\n  \\qquad \\forall i\\in[n].\n  \\]\n\n\n\n\nBonasera, L., Duma, D., Gualandi, S. (2024). Learning Sparse-Lets for Interpretable Classification of Event-interval Sequences. In Metaheuristics: MIC 2024 (Lecture Notes in Computer Science, Vol. 14754).\n\n\n\nPossible extension: After being sampled, e-lets/sparse-lets are matched to each e-sequence using a sliding window. Therefore, Eq. (1) implies that the length of each e-let/sparse-let must be less than or equal to the length of the shortest e-sequence, that is\n\\[\n  \\ell(\\mathcal{S}_i^{k, l}) \\leq \\min_{\\mathcal{S}_j \\in \\mathcal{D}} \\, \\ell(\\mathcal{S}_j), \\qquad \\forall k \\in \\{0, \\dotsc, \\ell(\\mathcal{S}_i) - 1\\}, \\; \\forall l \\in \\{1, \\dotsc, \\ell(\\mathcal{S}_i) - k\\}, \\; \\forall i \\in \\{1, \\dotsc, N\\}.\n  \\]\nThis can be a limitation in applications where e-sequence lengths vary substantially. In such cases, the sampled e-lets/sparse-lets may be unable to capture relevant patterns in the data. One possible solution is to add a “no-event” symbol to the alphabet of the e-sequences. This makes it possible to pad shorter e-sequences with no-event symbols, thereby removing the constraint on the maximum length of e-lets/sparse-lets."
   },
   {
-    "objectID": "publications.html",
-    "href": "publications.html",
-    "title": "Publications",
+    "objectID": "publications-list.html",
+    "href": "publications-list.html",
+    "title": "Lorenzo Bonasera",
     "section": "",
-    "text": "Notes: * corresponding author; GS graduate student advisee; VS visiting scholar;  ESI Highly Cited Paper (top 1%);  ESI Hot Paper (top 0.1%)\nTotal citations as of January 2025:"
+    "text": "Working Papers\nLorenzo Bonasera, David Pisinger\nJoint Rashomon and Robustness Optimization for Interpretable Contextual Decision Making\nIn preparation\nLorenzo Bonasera, David Pisinger\nSequential Decision Support for Implementing Near-Optimal Integer Programming Solutions\nSubmitted\n\n\nJournal Articles\nLorenzo Bonasera, Emilio Carrizosa\nA unified approach to extract interpretable rules from tree ensembles via Integer Programming\nComputers & Operations Research (2025)\nLorenzo Bonasera\nOperations Research for Interpretable Machine Learning\n4OR - PhD Thesis (2025)\nAmbrogio Maria Bernardelli, Lorenzo Bonasera, Davide Duma, Eleonora Vercesi\nMulti-objective stochastic scheduling of inpatient and outpatient surgeries\nFlexible Services and Manufacturing Journal (2024)\nLorenzo Bonasera, Stefano Gualandi\nOptimal shapelets tree for time series interpretable classification\nEURO Journal on Computational Optimization (2024)\n\n\nBook Chapters and Conference Proceedings\nLorenzo Bonasera, Simone Drysch, Aliza Reif, Oscar Hernán Ramírez-Agudelo, Michael Karl\nA Text-to-Speech Framework for Generating Synthetic Maritime Radio Communications in ASR Evaluation\nAccepted at NATO STO International Conference on Military Communication and Information Systems (2026)\nAliza Reif, Lorenzo Bonasera, Stjepan Picek, Oscar Hernán Ramírez-Agudelo, Michael Karl\nBlack-Box Universal Adversarial Attack on Automatic Speech Recognition Systems for Maritime Radio Communication Using Evolutionary Strategies\n18th ACM Workshop on Artificial Intelligence and Security (2025)\nLorenzo Bonasera, Davide Duma, Stefano Gualandi\nLearning Sparse-Lets for Interpretable Classification of Event-interval Sequences\n15th Metaheuristics International Conference (2024)"
   },
   {
-    "objectID": "publications.html#selected-work",
-    "href": "publications.html#selected-work",
-    "title": "Publications",
-    "section": "Selected Work",
-    "text": "Selected Work\nEinstein, A., Podolsky, B., & Rosen, N. (1935). Can quantum-mechanical description of physical reality be considered complete?. Physical review, 47(10), 777. [pdf] [code and data]   \n\n\n\n\n\n\nEinstein, A. (1965). Concerning an heuristic point of view toward the emission and transformation of light. American Journal of Physics, 33(5), 367. [pdf]"
+    "objectID": "posts/paper-title/index.html#abstract",
+    "href": "posts/paper-title/index.html#abstract",
+    "title": "Can quantum-mechanical description of physical reality be considered complete?",
+    "section": "Abstract",
+    "text": "Abstract\nIn a complete theory there is an element corresponding to each element of reality. A sufficient condition for the reality of a physical quantity is the possibility of predicting it with certainty, without disturbing the system. In quantum mechanics in the case of two physical quantities described by non-commuting operators, the knowledge of one precludes the knowledge of the other. Then either (1) the description of reality given by the wave function in quantum mechanics is not complete or (2) these two quantities cannot have simultaneous reality. Consideration of the problem of making predictions concerning a system on the basis of measurements made on another system that had previously interacted with it leads to the result that if (1) is false then (2) is also false. One is thus led to conclude that the description of reality as given by a wave function is not complete."
+  },
+  {
+    "objectID": "posts/paper-title/index.html#links",
+    "href": "posts/paper-title/index.html#links",
+    "title": "Can quantum-mechanical description of physical reality be considered complete?",
+    "section": "Links",
+    "text": "Links\nPublished paper"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Lorenzo Bonasera",
+    "section": "",
+    "text": "I am currently a postdoctoral researcher at DTU Management, working on the DECIDE project with David Pisinger. I obtained my PhD in operations research from the University of Pavia and the University of Lugano (USI), under the supervision of Stefano Gualandi. I previously worked as a research scientist at the German Aerospace Center (DLR) in the Institute for AI Safety and Security, applying Generative AI methods to enhance situational awareness in the maritime domain.\nMy main research agenda focuses on reducing the arbitrariness in data-driven decision making. I pursue this goal through two complementary research directions:\n\ndeveloping interpretable machine learning models;\ndesigning decision-support systems that account for predictive and prescriptive multiplicity.\n\nYou can reach me at: lobon [at] dtu [dot] dk"
+  },
+  {
+    "objectID": "index.html#publications",
+    "href": "index.html#publications",
+    "title": "Lorenzo Bonasera",
+    "section": "Publications",
+    "text": "Publications\n\n\nWorking Papers\nLorenzo Bonasera, David Pisinger\nJoint Rashomon and Robustness Optimization for Interpretable Contextual Decision Making\nIn preparation\nLorenzo Bonasera, David Pisinger\nSequential Decision Support for Implementing Near-Optimal Integer Programming Solutions\nSubmitted\n\n\nJournal Articles\nLorenzo Bonasera, Emilio Carrizosa\nA unified approach to extract interpretable rules from tree ensembles via Integer Programming\nComputers & Operations Research (2025)\nLorenzo Bonasera\nOperations Research for Interpretable Machine Learning\n4OR - PhD Thesis (2025)\nAmbrogio Maria Bernardelli, Lorenzo Bonasera, Davide Duma, Eleonora Vercesi\nMulti-objective stochastic scheduling of inpatient and outpatient surgeries\nFlexible Services and Manufacturing Journal (2024)\nLorenzo Bonasera, Stefano Gualandi\nOptimal shapelets tree for time series interpretable classification\nEURO Journal on Computational Optimization (2024)\n\n\nBook Chapters and Conference Proceedings\nLorenzo Bonasera, Simone Drysch, Aliza Reif, Oscar Hernán Ramírez-Agudelo, Michael Karl\nA Text-to-Speech Framework for Generating Synthetic Maritime Radio Communications in ASR Evaluation\nAccepted at NATO STO International Conference on Military Communication and Information Systems (2026)\nAliza Reif, Lorenzo Bonasera, Stjepan Picek, Oscar Hernán Ramírez-Agudelo, Michael Karl\nBlack-Box Universal Adversarial Attack on Automatic Speech Recognition Systems for Maritime Radio Communication Using Evolutionary Strategies\n18th ACM Workshop on Artificial Intelligence and Security (2025)\nLorenzo Bonasera, Davide Duma, Stefano Gualandi\nLearning Sparse-Lets for Interpretable Classification of Event-interval Sequences\n15th Metaheuristics International Conference (2024)"
   },
   {
     "objectID": "pub-listing.html",
@@ -42,122 +63,17 @@
     "text": "Peer-reviewed Journal Papers\n\n\n\n\nNo matching items"
   },
   {
-    "objectID": "posts.html",
-    "href": "posts.html",
-    "title": "What’s New & Updated",
+    "objectID": "publications.html",
+    "href": "publications.html",
+    "title": "Publications",
     "section": "",
-    "text": "Order By\n      Default\n      \n        Title\n      \n      \n        Date - Oldest\n      \n      \n        Date - Newest\n      \n      \n        Author\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nQuarto Academic Website Examples and Tips\n\n\n\n\n\n\nnews\n\n\n\nExamples and tips for Quarto Academic Website\n\n\n\n\n\nOct 15, 2024\n\n\nDr. Gang He\n\n\n\n\n\n\n\n\n\n\n\n\nEvent item\n\n\n\n\n\n\nevent\n\npresentation\n\n\n\nAbout Event item.\n\n\n\n\n\nSep 3, 2024\n\n\nEvent\n\n\n\n\n\n\n\n\n\n\n\n\nNews item\n\n\n\n\n\n\nnews\n\n\n\nAbout new item\n\n\n\n\n\nJun 24, 2024\n\n\nNews\n\n\n\n\n\n\n\n\n\n\n\n\nCan quantum-mechanical description of physical reality be considered complete?\n\n\nPhysical Review\n\n\n\npaper\n\n\n\nOne is thus led to conclude that the description of reality as given by a wave function is not complete.\n\n\n\n\n\nMay 15, 1935\n\n\nAlbert Einstein, Boris Podolsky, Nathan Rosen\n\n\n\n\n\nNo matching items"
+    "text": "Notes: * corresponding author; GS graduate student advisee; VS visiting scholar;  ESI Highly Cited Paper (top 1%);  ESI Hot Paper (top 0.1%)\nTotal citations as of January 2025:"
   },
   {
-    "objectID": "posts/news-title/index.html",
-    "href": "posts/news-title/index.html",
-    "title": "News item",
-    "section": "",
-    "text": "About the news"
-  },
-  {
-    "objectID": "posts/news-title/index.html#summary",
-    "href": "posts/news-title/index.html#summary",
-    "title": "News item",
-    "section": "",
-    "text": "About the news"
-  },
-  {
-    "objectID": "people.html",
-    "href": "people.html",
-    "title": "People",
-    "section": "",
-    "text": "PhD Student\n\n\n\n\n\n\n\n\n\n\n\n\n\nMasters Student\n\n\n\n\n\n\n\n\n\n\n\n\n\nUndergraduate Student\n\n\n\n\n\n\n\n\n\n\n\n\n\nPI\n\n\n\n\n\nNo matching items"
-  },
-  {
-    "objectID": "people.html#team",
-    "href": "people.html#team",
-    "title": "People",
-    "section": "",
-    "text": "PhD Student\n\n\n\n\n\n\n\n\n\n\n\n\n\nMasters Student\n\n\n\n\n\n\n\n\n\n\n\n\n\nUndergraduate Student\n\n\n\n\n\n\n\n\n\n\n\n\n\nPI\n\n\n\n\n\nNo matching items"
-  },
-  {
-    "objectID": "people.html#alumni",
-    "href": "people.html#alumni",
-    "title": "People",
-    "section": "Alumni",
-    "text": "Alumni\n\n\n   \n    \n    \n      Order By\n      Default\n      \n      \n      \n        Name\n      \n      \n        Role\n      \n      \n        Started\n      \n      \n        Ended\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\n \n\n\n\nName\n\n\n\nRole\n\n\n\nStarted\n\n\n\nEnded\n\n\n\n\n\n\n\n\n\n\n\nAlumni A\n\n\nPhD Alumni\n\n\n2022-01\n\n\n2026-01\n\n\n\n\n\n\n\n\n\nAlumni B\n\n\nMasters Alumni\n\n\n2024-01\n\n\n2025-01\n\n\n\n\n\n\n\n\n\nAlumni C\n\n\nUndergraduate Alumni\n\n\n2023-01\n\n\n2024-01\n\n\n\n\n\n\nNo matching items"
-  },
-  {
-    "objectID": "contact.html",
-    "href": "contact.html",
-    "title": "Contact",
-    "section": "",
-    "text": "Quarto Academic\nSchool\nCollege\nUniversity\nAddress:\nPhone:\nE-mail:"
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Lorenzo Bonasera",
-    "section": "",
-    "text": "I am currently a postdoctoral researcher at DTU Management, working on the DECIDE project with David Pisinger. I obtained my PhD in operations research from the University of Pavia and the University of Lugano (USI), under the supervision of Stefano Gualandi. I previously worked as a research scientist at the German Aerospace Center (DLR) in the Institute for AI Safety and Security, applying Generative AI methods to enhance situational awareness in the maritime domain.\nMy main research agenda focuses on reducing the arbitrariness in data-driven decision making. I pursue this goal through two complementary research directions:\n\ndeveloping interpretable machine learning models;\ndesigning decision-support systems that account for predictive and prescriptive multiplicity.\n\nYou can reach me at: lobon [at] dtu [dot] dk"
-  },
-  {
-    "objectID": "index.html#publications",
-    "href": "index.html#publications",
-    "title": "Lorenzo Bonasera",
-    "section": "Publications",
-    "text": "Publications\n\n\nWorking Papers\nLorenzo Bonasera, David Pisinger\nJoint Rashomon and Robustness Optimization for Interpretable Contextual Decision Making\nIn preparation\nLorenzo Bonasera, David Pisinger\nSequential Decision Support for Implementing Near-Optimal Integer Programming Solutions\nSubmitted\n\n\nJournal Articles\nLorenzo Bonasera, Emilio Carrizosa\nA unified approach to extract interpretable rules from tree ensembles via Integer Programming\nComputers & Operations Research (2025)\nLorenzo Bonasera\nOperations Research for Interpretable Machine Learning\n4OR - PhD Thesis (2025)\nAmbrogio Maria Bernardelli, Lorenzo Bonasera, Davide Duma, Eleonora Vercesi\nMulti-objective stochastic scheduling of inpatient and outpatient surgeries\nFlexible Services and Manufacturing Journal (2024)\nLorenzo Bonasera, Stefano Gualandi\nOptimal shapelets tree for time series interpretable classification\nEURO Journal on Computational Optimization (2024)\n\n\nBook Chapters and Conference Proceedings\nLorenzo Bonasera, Simone Drysch, Aliza Reif, Oscar Hernán Ramírez-Agudelo, Michael Karl\nA Text-to-Speech Framework for Generating Synthetic Maritime Radio Communications in ASR Evaluation\nAccepted at NATO STO International Conference on Military Communication and Information Systems (2026)\nAliza Reif, Lorenzo Bonasera, Stjepan Picek, Oscar Hernán Ramírez-Agudelo, Michael Karl\nBlack-Box Universal Adversarial Attack on Automatic Speech Recognition Systems for Maritime Radio Communication Using Evolutionary Strategies\n18th ACM Workshop on Artificial Intelligence and Security (2025)\nLorenzo Bonasera, Davide Duma, Stefano Gualandi\nLearning Sparse-Lets for Interpretable Classification of Event-interval Sequences\n15th Metaheuristics International Conference (2024)"
-  },
-  {
-    "objectID": "posts/paper-title/index.html#abstract",
-    "href": "posts/paper-title/index.html#abstract",
-    "title": "Can quantum-mechanical description of physical reality be considered complete?",
-    "section": "Abstract",
-    "text": "Abstract\nIn a complete theory there is an element corresponding to each element of reality. A sufficient condition for the reality of a physical quantity is the possibility of predicting it with certainty, without disturbing the system. In quantum mechanics in the case of two physical quantities described by non-commuting operators, the knowledge of one precludes the knowledge of the other. Then either (1) the description of reality given by the wave function in quantum mechanics is not complete or (2) these two quantities cannot have simultaneous reality. Consideration of the problem of making predictions concerning a system on the basis of measurements made on another system that had previously interacted with it leads to the result that if (1) is false then (2) is also false. One is thus led to conclude that the description of reality as given by a wave function is not complete."
-  },
-  {
-    "objectID": "posts/paper-title/index.html#links",
-    "href": "posts/paper-title/index.html#links",
-    "title": "Can quantum-mechanical description of physical reality be considered complete?",
-    "section": "Links",
-    "text": "Links\nPublished paper"
-  },
-  {
-    "objectID": "projects.html",
-    "href": "projects.html",
-    "title": "Projects",
-    "section": "",
-    "text": "Order By\n      Default\n      \n      \n      \n        Title\n      \n      \n        Team\n      \n      \n        Funder\n      \n      \n        Description\n      \n      \n        Start\n      \n      \n        End\n      \n      \n        Funding\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\n \n\n\n\nTitle\n\n\n\nTeam\n\n\n\nFunder\n\n\n\nDescription\n\n\n\nFunding\n\n\n\nStart\n\n\n\nEnd\n\n\n\n\n\n\n\n\n\n\n\nExploring \n\n\nAcademic Website\n\n\nFunder\n\n\nThe goal of this project is to investigate .\n\n\n$0\n\n\n2024\n\n\n2025\n\n\n\n\n\n\nNo matching items"
-  },
-  {
-    "objectID": "publications-list.html",
-    "href": "publications-list.html",
-    "title": "Lorenzo Bonasera",
-    "section": "",
-    "text": "Working Papers\nLorenzo Bonasera, David Pisinger\nJoint Rashomon and Robustness Optimization for Interpretable Contextual Decision Making\nIn preparation\nLorenzo Bonasera, David Pisinger\nSequential Decision Support for Implementing Near-Optimal Integer Programming Solutions\nSubmitted\n\n\nJournal Articles\nLorenzo Bonasera, Emilio Carrizosa\nA unified approach to extract interpretable rules from tree ensembles via Integer Programming\nComputers & Operations Research (2025)\nLorenzo Bonasera\nOperations Research for Interpretable Machine Learning\n4OR - PhD Thesis (2025)\nAmbrogio Maria Bernardelli, Lorenzo Bonasera, Davide Duma, Eleonora Vercesi\nMulti-objective stochastic scheduling of inpatient and outpatient surgeries\nFlexible Services and Manufacturing Journal (2024)\nLorenzo Bonasera, Stefano Gualandi\nOptimal shapelets tree for time series interpretable classification\nEURO Journal on Computational Optimization (2024)\n\n\nBook Chapters and Conference Proceedings\nLorenzo Bonasera, Simone Drysch, Aliza Reif, Oscar Hernán Ramírez-Agudelo, Michael Karl\nA Text-to-Speech Framework for Generating Synthetic Maritime Radio Communications in ASR Evaluation\nAccepted at NATO STO International Conference on Military Communication and Information Systems (2026)\nAliza Reif, Lorenzo Bonasera, Stjepan Picek, Oscar Hernán Ramírez-Agudelo, Michael Karl\nBlack-Box Universal Adversarial Attack on Automatic Speech Recognition Systems for Maritime Radio Communication Using Evolutionary Strategies\n18th ACM Workshop on Artificial Intelligence and Security (2025)\nLorenzo Bonasera, Davide Duma, Stefano Gualandi\nLearning Sparse-Lets for Interpretable Classification of Event-interval Sequences\n15th Metaheuristics International Conference (2024)"
-  },
-  {
-    "objectID": "teaching.html",
-    "href": "teaching.html",
-    "title": "Teaching",
-    "section": "",
-    "text": "Fall 2024,   Fall 2023\nClass 1 introduction."
-  },
-  {
-    "objectID": "teaching.html#class-1",
-    "href": "teaching.html#class-1",
-    "title": "Teaching",
-    "section": "",
-    "text": "Fall 2024,   Fall 2023\nClass 1 introduction."
-  },
-  {
-    "objectID": "teaching.html#class-2",
-    "href": "teaching.html#class-2",
-    "title": "Teaching",
-    "section": "Class 2",
-    "text": "Class 2\n\n\n\n\n\nSpring 2025,   Fall 2023\nClass 2 introduction."
-  },
-  {
-    "objectID": "teaching.html#class-3",
-    "href": "teaching.html#class-3",
-    "title": "Teaching",
-    "section": "Class 3",
-    "text": "Class 3\n\n\n\n\n\nSpring 2025,   Spring 2024\nClass 3 introduction."
+    "objectID": "publications.html#selected-work",
+    "href": "publications.html#selected-work",
+    "title": "Publications",
+    "section": "Selected Work",
+    "text": "Selected Work\nEinstein, A., Podolsky, B., & Rosen, N. (1935). Can quantum-mechanical description of physical reality be considered complete?. Physical review, 47(10), 777. [pdf] [code and data]   \n\n\n\n\n\n\nEinstein, A. (1965). Concerning an heuristic point of view toward the emission and transformation of light. American Journal of Physics, 33(5), 367. [pdf]"
   }
 ]
