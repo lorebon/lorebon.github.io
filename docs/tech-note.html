@@ -160,13 +160,13 @@ Bonasera, L., Gualandi, S. (2024). Optimal shapelets tree for time series interp
 <p><span style="display:block; height:0.1rem;"></span></p>
 <ul>
 <li><p><span style="color: green;">Possible extension:</span> As defined in Eq. (1), the distance between a shapelet and a time series is computed by minimizing the distance between the shapelet and all subsequences of the time series having the same length. In the case of long shapelets, the magnitude of the distance may increase with the shapelet length, leading to larger Big-M values in Eqs. (60)–(61) and, consequently, to weaker linear relaxations.</p>
-<p>A possible alternative is to use the normalized <span class="math inline">\(\ell_1\)</span> distance</p>
+<p>Given a shapelet <span class="math inline">\(\mathbf{y}\in[0,1]^\ell\)</span> and a time series <span class="math inline">\(\mathbf{x}\in[0,1]^m\)</span>, one possible alternative is to use the normalized <span class="math inline">\(\ell_1\)</span> distance</p>
 <p><span class="math display">\[
   \operatorname{dist}(\mathbf{x}, \mathbf{y})
   =
   \min_{1 \leq p \leq q}
   \frac{1}{\ell}
-  \left\lVert \mathbf{y} - \mathbf{x}_p^\ell \right\rVert_1 .
+  \left\lVert \mathbf{y} - \mathbf{x}_p^\ell \right\rVert_1, \qquad q = m - \ell + 1.
   \]</span></p>
 <p>In this way, we can rewrite Eq. (73) as</p>
 <p><span class="math display">\[
@@ -195,7 +195,7 @@ Bonasera, L., Gualandi, S. (2024). Optimal shapelets tree for time series interp
   0 \leq b_t \leq 1,
   \qquad \forall t\in \mathcal{T}_B.
   \]</span></p>
-<p>Similarly, for Eq. (74), we obtain</p>
+<p>Similarly, for Eq. (74) we obtain</p>
 <p><span class="math display">\[
   M_i^R
   =
