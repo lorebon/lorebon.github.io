@@ -1,7 +1,19 @@
 /* Homepage layout: photo/links on the left, bio on the right, publications below. */
 
+body {
+  font-size: 1.05rem;
+}
+
 main.content {
-  max-width: 950px;
+  max-width: 1000px;
+  font-size: 1.05rem;
+  line-height: 1.55;
+}
+
+main.content p,
+main.content li,
+main.content summary {
+  font-size: inherit;
 }
 
 .home-hero {
@@ -167,4 +179,13 @@ a:hover {
 /* Keep first element inside the expanded content from adding extra top space */
 .tech-note[open] summary + * {
   margin-top: 0;
+}
+
+/* Force consistent navbar size on every page */
+#quarto-header nav.navbar a.navbar-brand {
+  font-size: 1.24rem !important;
+}
+
+#quarto-header nav.navbar .navbar-nav .nav-link {
+  font-size: 1.04rem !important;
 }
