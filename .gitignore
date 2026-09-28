@@ -1,4 +1,3 @@
-@"
 # Ignore everything by default
 *
 
@@ -8,4 +7,6 @@
 
 # Keep this ignore file
 !.gitignore
-"@ | Set-Content -Encoding UTF8 .gitignore
+!google*.html
+/.quarto/
+**/*.quarto_ipynb

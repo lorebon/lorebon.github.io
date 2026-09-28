@@ -5,6 +5,7 @@ body {
 }
 
 main.content {
+  min-width: 0;
   max-width: 1000px;
   font-size: 1.05rem;
   line-height: 1.55;
@@ -43,6 +44,10 @@ main.content summary {
 
 .photo-links p {
   margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.9rem;
 }
 
 .photo-links a {
@@ -121,6 +126,11 @@ main.content summary {
     text-decoration: none !important;
   }
 
+  .photo-links p {
+    justify-content: space-between;
+    width: 100%;
+  }
+
   .photo-links svg,
   .photo-links i {
     width: 1.5rem !important;
@@ -188,4 +198,12 @@ a:hover {
 
 #quarto-header nav.navbar .navbar-nav .nav-link {
   font-size: 1.04rem !important;
+}
+
+/* Keep wide equations scrollable without widening the page on small screens. */
+.tech-note .math.display {
+  display: block;
+  max-width: 100%;
+  overflow-x: auto;
+  padding-block: 0.25rem;
 }
