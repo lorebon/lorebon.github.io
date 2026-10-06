@@ -161,7 +161,7 @@ a:hover {
   font-size: 2rem !important;
 }
 
-/* Keep bracketed resource links together beside the working-paper status. */
+/* Keep parenthesized resource links together beside the working-paper status. */
 .publication-resource {
   white-space: nowrap;
 }
