@@ -161,6 +161,30 @@ a:hover {
   font-size: 2rem !important;
 }
 
+/* Secondary resource links beneath working-paper status lines. */
+.publication-resource {
+  display: inline-flex;
+  align-items: center;
+  min-height: 2rem;
+  margin-top: 0.4rem;
+  padding: 0.15rem 0.6rem;
+  border: 1px solid #767676;
+  border-radius: 0.3rem;
+  font-size: 0.85rem;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.publication-resource:hover {
+  background-color: #f1f3f5;
+  text-decoration: underline;
+}
+
+.publication-resource:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 3px;
+}
+
 /* Tech-note accordion layout */
 .tech-note {
   margin: 1rem 0;
