@@ -179,10 +179,28 @@ a:hover {
 }
 
 .publication-presentations summary {
+  display: inline;
   cursor: pointer;
   font-weight: 400;
-  width: fit-content;
-  min-height: 1.5rem;
+}
+
+.publication-presentations summary::-webkit-details-marker {
+  display: none;
+}
+
+.publication-presentations summary::before {
+  content: "\25B8";
+  display: inline-block;
+  margin-right: 0.35em;
+}
+
+.publication-presentations[open] summary::before {
+  content: "\25BE";
+}
+
+/* Modern browsers wrap disclosure content in this pseudo-element. */
+.publication-presentations[open]::details-content {
+  display: inline;
 }
 
 .publication-presentations summary:hover {
@@ -194,8 +212,9 @@ a:hover {
   outline-offset: 3px;
 }
 
-.publication-presentations .presentation-conferences {
-  margin: 0.25rem 0 0;
+.publication-presentations[open] .presentation-conferences {
+  display: inline;
+  margin: 0;
 }
 
 /* Tech-note accordion layout */
