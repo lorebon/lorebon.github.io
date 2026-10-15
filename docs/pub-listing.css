@@ -171,9 +171,15 @@ a:hover {
   outline-offset: 3px;
 }
 
-/* Optional conference disclosures beneath publication details. */
+/* Shared typography for presentation disclosures and their introductory note. */
+.publication-note,
 .publication-presentations {
   font-size: 0.9em;
+  font-weight: 400;
+}
+
+/* Optional conference disclosures beneath publication details. */
+.publication-presentations {
   margin-top: -0.75rem;
   margin-bottom: 1rem;
 }
