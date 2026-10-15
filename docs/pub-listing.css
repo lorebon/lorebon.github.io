@@ -73,6 +73,23 @@ main.content summary {
   margin-top: 2.5rem;
 }
 
+/* Keep the note with the heading, above its divider. */
+#publications > h2 {
+  border-bottom: 0;
+  padding-bottom: 0;
+  margin-bottom: 0.25rem;
+}
+
+#publications > h2 + p {
+  border-bottom: 1px solid #dee2e6;
+  padding-bottom: 0.5rem;
+}
+
+.publication-note,
+.publication-presentations summary {
+  color: #6c757d;
+}
+
 #publications + h3,
 #publications ~ h3 {
   margin-top: 1.75rem;
