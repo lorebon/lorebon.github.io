@@ -195,8 +195,16 @@ a:hover {
 }
 
 .publication-presentations ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.15rem 0.6rem;
   margin: 0.25rem 0 0;
-  padding-left: 1.25rem;
+  padding: 0;
+  list-style: none;
+}
+
+.publication-presentations li:not(:last-child)::after {
+  content: ";";
 }
 
 /* Tech-note accordion layout */
