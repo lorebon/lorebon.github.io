@@ -189,13 +189,15 @@ a:hover {
 }
 
 .publication-presentations summary::before {
-  content: "\25B8";
+  content: "+";
   display: inline-block;
+  width: 0.8em;
+  text-align: center;
   margin-right: 0.35em;
 }
 
 .publication-presentations[open] summary::before {
-  content: "\25BE";
+  content: "\2212";
 }
 
 /* Modern browsers wrap disclosure content in this pseudo-element. */
