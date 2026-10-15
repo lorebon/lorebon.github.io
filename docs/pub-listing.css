@@ -194,17 +194,8 @@ a:hover {
   outline-offset: 3px;
 }
 
-.publication-presentations ul {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.15rem 0.6rem;
+.publication-presentations .presentation-conferences {
   margin: 0.25rem 0 0;
-  padding: 0;
-  list-style: none;
-}
-
-.publication-presentations li:not(:last-child)::after {
-  content: ";";
 }
 
 /* Tech-note accordion layout */
