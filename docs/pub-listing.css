@@ -171,6 +171,11 @@ a:hover {
   outline-offset: 3px;
 }
 
+/* Supporting conference details beneath journal articles. */
+.publication-presentations {
+  font-size: 0.9em;
+}
+
 /* Tech-note accordion layout */
 .tech-note {
   margin: 1rem 0;
