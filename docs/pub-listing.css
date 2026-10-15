@@ -171,9 +171,32 @@ a:hover {
   outline-offset: 3px;
 }
 
-/* Supporting conference details beneath journal articles. */
+/* Optional conference disclosures beneath publication details. */
 .publication-presentations {
   font-size: 0.9em;
+  margin-top: -0.75rem;
+  margin-bottom: 1rem;
+}
+
+.publication-presentations summary {
+  cursor: pointer;
+  font-weight: 400;
+  width: fit-content;
+  min-height: 1.5rem;
+}
+
+.publication-presentations summary:hover {
+  text-decoration: underline;
+}
+
+.publication-presentations summary:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 3px;
+}
+
+.publication-presentations ul {
+  margin: 0.25rem 0 0;
+  padding-left: 1.25rem;
 }
 
 /* Tech-note accordion layout */
