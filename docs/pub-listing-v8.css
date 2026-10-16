@@ -343,6 +343,42 @@ a:hover {
   margin-top: 0;
 }
 
+/* Match the disclosure motion, sliding note bodies vertically below their titles. */
+@supports selector(::details-content) and (transition-behavior: allow-discrete) {
+  @media (prefers-reduced-motion: no-preference) {
+    /* Keep title spacing with the body until its closing transition finishes. */
+    .tech-note[open] summary {
+      margin-bottom: 0;
+    }
+
+    .tech-note::details-content {
+      display: none;
+      position: relative;
+      top: -0.5rem;
+      opacity: 0;
+      padding-top: 1rem;
+      transition:
+        top 220ms ease-out,
+        opacity 220ms ease-out,
+        content-visibility 220ms allow-discrete,
+        display 220ms allow-discrete;
+    }
+
+    .tech-note[open]::details-content {
+      display: block;
+      top: 0;
+      opacity: 1;
+    }
+
+    @starting-style {
+      .tech-note[open]::details-content {
+        top: -0.5rem;
+        opacity: 0;
+      }
+    }
+  }
+}
+
 /* Force consistent navbar size on every page */
 #quarto-header nav.navbar a.navbar-brand {
   font-size: 1.24rem !important;
