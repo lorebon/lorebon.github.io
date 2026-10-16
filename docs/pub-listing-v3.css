@@ -51,8 +51,16 @@ main.content summary {
 }
 
 .photo-links a {
+  position: relative;
   color: inherit;
   text-decoration: none;
+}
+
+/* Expand the hit area without changing icon size or spacing. */
+.photo-links a::after {
+  content: "";
+  position: absolute;
+  inset: -6px;
 }
 
 .photo-links a:hover {
@@ -203,6 +211,7 @@ a:hover {
 
 .publication-presentations summary {
   display: inline;
+  padding-block: 0.35rem;
   cursor: pointer;
   font-weight: 400;
 }
