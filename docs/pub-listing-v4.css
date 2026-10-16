@@ -125,13 +125,13 @@ main.content summary {
   }
 
   .home-photo img {
-    width: 180px;
+    width: 160px;
     margin-left: auto;
     margin-right: auto;
   }
 
   .photo-links {
-    width: 180px !important;          /* match your mobile image width */
+    width: 180px !important;          /* Preserve room for four separate tap targets. */
     max-width: 100% !important;
     margin: 0.9rem auto 0 auto !important;
 
