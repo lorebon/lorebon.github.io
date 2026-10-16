@@ -274,6 +274,45 @@ a:hover {
   }
 }
 
+/* Keep the content visible while the native disclosure closes. */
+@supports selector(::details-content) and (transition-behavior: allow-discrete) {
+  @media (prefers-reduced-motion: no-preference) {
+    .publication-presentations::details-content {
+      display: none;
+      position: relative;
+      left: -0.5rem;
+      opacity: 0;
+      transition:
+        left 220ms ease-out,
+        opacity 220ms ease-out,
+        content-visibility 220ms allow-discrete,
+        display 220ms allow-discrete;
+    }
+
+    .publication-presentations[open]::details-content {
+      display: inline;
+      left: 0;
+      opacity: 1;
+    }
+
+    @starting-style {
+      .publication-presentations[open]::details-content {
+        left: -0.5rem;
+        opacity: 0;
+      }
+    }
+
+    /* Preserve wrapping throughout both directions of the transition. */
+    .publication-presentations .presentation-conferences,
+    .publication-presentations[open] .presentation-conferences {
+      display: inline;
+      margin: 0;
+      position: static;
+      animation: none;
+    }
+  }
+}
+
 /* Tech-note accordion layout */
 .tech-note {
   margin: 1rem 0;
