@@ -98,16 +98,21 @@ main.content summary {
   color: #6c757d;
 }
 
-#publications + h3,
-#publications ~ h3 {
-  margin-top: 1.75rem;
-  margin-bottom: 0.75rem;
+/* Separate publication categories and keep each complete paper together. */
+#publications > section.level3 {
+  margin-top: 2rem;
 }
 
-/* Keep generated publication entries readable without relying on raw HTML. */
-#publications ~ p {
-  margin-bottom: 1.25rem;
-  line-height: 1.4;
+#publications > section.level3 > h3 {
+  margin: 0 0 0.75rem;
+}
+
+#publications .publication-entry > p {
+  margin: 0;
+}
+
+#publications .publication-entry + .publication-entry {
+  margin-top: 1.5rem;
 }
 
 @media (max-width: 700px) {
@@ -204,9 +209,8 @@ a:hover {
 }
 
 /* Optional conference disclosures beneath publication details. */
-.publication-presentations {
-  margin-top: -0.75rem;
-  margin-bottom: 1rem;
+.publication-entry > .publication-presentations {
+  margin: 0.25rem 0 0;
 }
 
 .publication-presentations summary {
