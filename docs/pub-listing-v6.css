@@ -255,6 +255,25 @@ a:hover {
   margin: 0;
 }
 
+/* Slide conference names into their inline position without changing wrapping. */
+@media (prefers-reduced-motion: no-preference) {
+  .publication-presentations[open] .presentation-conferences {
+    position: relative;
+    animation: presentation-slide-in 220ms ease-out;
+  }
+}
+
+@keyframes presentation-slide-in {
+  from {
+    left: -0.5rem;
+    opacity: 0;
+  }
+  to {
+    left: 0;
+    opacity: 1;
+  }
+}
+
 /* Tech-note accordion layout */
 .tech-note {
   margin: 1rem 0;
