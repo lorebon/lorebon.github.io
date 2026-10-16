@@ -313,24 +313,62 @@ a:hover {
   }
 }
 
-/* Tech-note accordion layout */
+/* Tech-note cards and citation hierarchy. */
 .tech-note {
   margin: 1rem 0;
   padding: 1rem 1.15rem;
-  border: 1px solid #ddd;
+  border: 1px solid #e2e6ea;
   border-radius: 8px;
-  background: #fafafa;
+  background: #fff;
+}
+
+.tech-note:has(> summary:hover) {
+  background: #f8f9fa;
+  border-color: #d4dae0;
 }
 
 .tech-note summary {
   cursor: pointer;
-  font-weight: 600;
+  font-weight: 400;
   font-size: 1.05rem;
   margin: 0;
 }
 
-.tech-note summary:hover {
-  opacity: 0.75;
+/* Align wrapped citation lines beside the native disclosure marker. */
+.tech-note-heading {
+  display: inline-block;
+  width: calc(100% - 1.4em);
+  vertical-align: top;
+}
+
+.tech-note-title {
+  display: block;
+  color: #343a40;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.tech-note-authors,
+.tech-note-venue {
+  display: block;
+  color: #6c757d;
+  font-size: 0.9rem;
+  font-weight: 400;
+  line-height: 1.45;
+}
+
+.tech-note-authors {
+  margin-top: 0.35rem;
+}
+
+.tech-note-venue {
+  margin-top: 0.1rem;
+}
+
+.tech-note summary:focus-visible {
+  outline: 2px solid #6c757d;
+  outline-offset: 4px;
+  border-radius: 2px;
 }
 
 /* Spacing between clickable title and expanded content */
