@@ -77,8 +77,13 @@ main.content summary {
   line-height: 1.45;
 }
 
-#publications {
+.publication-list {
   margin-top: 2.5rem;
+}
+
+.publication-list > h2 {
+  border-bottom: 1px solid #dee2e6;
+  padding-bottom: 0.5rem;
 }
 
 /* Keep the note with the heading, above its divider. */
@@ -98,20 +103,12 @@ main.content summary {
   color: #6c757d;
 }
 
-/* Separate publication categories and keep each complete paper together. */
-#publications > section.level3 {
-  margin-top: 2rem;
-}
-
-#publications > section.level3 > h3 {
-  margin: 0 0 0.75rem;
-}
-
-#publications .publication-entry > p {
+/* Apply the same entry spacing to both lists. */
+.publication-list .publication-entry > p {
   margin: 0;
 }
 
-#publications .publication-entry + .publication-entry {
+.publication-list .publication-entry + .publication-entry {
   margin-top: 1.5rem;
 }
 
