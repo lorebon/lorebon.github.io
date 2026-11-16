@@ -27,6 +27,8 @@ main.content summary {
 }
 
 .home-photo img {
+  /* Map the drawing's #fdfdfd paper to white while keeping black ink black. */
+  filter: brightness(1.008);
   width: 220px;        /* image width */
   max-width: 100%;
   height: auto;
